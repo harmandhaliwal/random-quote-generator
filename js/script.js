@@ -15,6 +15,8 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
+var quotes = [{quote: "The highest human act is to inspire.", source: "Nipsey Hussle", citation: "Twitter", year: "2016"}, {quote: "Board man gets paid.", source: "Kawhi Leonard" }, {quote: "Live your life like you’re the hero in your own movie.", source: "Joe Rogan"}, {quote: "Science is a way of thinking much more than it is a body of knowledge.", source: "Carl Sagan"}, {quote: "If you get to my age in life and nobody thinks well of you, I don’t care how big your bank account is, your life is a disaster.", source: "Warren Buffett"}];
+
 
 
 
