@@ -24,19 +24,19 @@ var rgbColor;
 
 var quotes = [
   {
-    quote: "The highest human act is to inspire.", source: "Nipsey Hussle", citation: "Twitter", year: "2016"
+    quote: "The highest human act is to inspire.", source: "Nipsey Hussle", citation: "Twitter", year: "2016", tags: "Inspiration"
   },
   {
-    quote: "Board man gets paid.", source: "Kawhi Leonard" 
+    quote: "Board man gets paid.", source: "Kawhi Leonard", citation: "", year: "", tags: "Sports" 
   }, 
   {
-    quote: "Live your life like you’re the hero in your own movie.", source: "Joe Rogan"
+    quote: "Live your life like you’re the hero in your own movie.", source: "Joe Rogan", citation: "", year: "", tags: "Inspiration"
   },
   {
-    quote: "Science is a way of thinking much more than it is a body of knowledge.", source: "Carl Sagan"
+    quote: "Science is a way of thinking much more than it is a body of knowledge.", source: "Carl Sagan", citation: "", year: "", tags: "Science"
   }, 
   {
-    quote: "If you get to my age in life and nobody thinks well of you, I don’t care how big your bank account is, your life is a disaster.", source: "Warren Buffett"
+    quote: "If you get to my age in life and nobody thinks well of you, I don’t care how big your bank account is, your life is a disaster.", source: "Warren Buffett", citation: "", year: "", tags: "Wisdom"
   }
 ];
 
@@ -90,6 +90,11 @@ function printQuote() {
    } else {
      message += '';
    }
+   if (quotes.tags) {
+    message += '<h3>' + quotes.tags + '</h3>';
+   } else {
+     message += '';
+   }
 outputDiv.innerHTML = message;
 
 bgColorGenerator();
@@ -106,6 +111,6 @@ document.getElementById('main').style.backgroundColor = bgColorGenerator();
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-setInterval(printQuote, 5000);
+setInterval(printQuote, 10000);
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
