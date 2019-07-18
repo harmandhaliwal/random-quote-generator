@@ -83,6 +83,6 @@ function printQuote() {
 // Event listener that invokes the printQuote function when the "Show another quote" button is clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-// Auto-refreshes the quote and selects a new one every 12 seconds
-setInterval(printQuote, 12000);
+// Auto-refreshes the quote and selects a new one every 15 seconds
+setInterval(printQuote, 15000);
 
