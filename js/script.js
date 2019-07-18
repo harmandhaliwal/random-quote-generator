@@ -106,5 +106,6 @@ document.getElementById('main').style.backgroundColor = bgColorGenerator();
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
+setInterval(printQuote, 5000);
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
