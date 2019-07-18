@@ -15,6 +15,13 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
+var red;
+var green;
+var blue;
+var rgbColor;
+
+
+
 var quotes = [
   {
     quote: "The highest human act is to inspire.", source: "Nipsey Hussle", citation: "Twitter", year: "2016"
@@ -58,6 +65,15 @@ function getRandomQuote() {
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
 
+function bgColorGenerator() {
+  red = Math.floor(Math.random() * 256);
+  green = Math.floor(Math.random() * 256);
+  blue = Math.floor(Math.random() * 256);
+  rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  return rgbColor;
+}
+
+
 function printQuote() {
  var quotes = getRandomQuote();
  var message = '';
@@ -75,8 +91,11 @@ function printQuote() {
      message += '';
    }
 outputDiv.innerHTML = message;
-}
 
+bgColorGenerator();
+
+document.getElementById('main').style.backgroundColor = bgColorGenerator();
+}
 
 /***
   When the "Show another quote" button is clicked, the event listener 
