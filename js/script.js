@@ -72,9 +72,6 @@ function printQuote() {
   }
   outputDiv.innerHTML = message;
 
-  // Generates a random color
-  bgColorGenerator();
-
   // Updates background with random color
   document.getElementById('main').style.backgroundColor = bgColorGenerator();
 }
