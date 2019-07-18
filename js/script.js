@@ -34,8 +34,6 @@ var quotes = [
 ];
 
 
-
-
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
@@ -46,7 +44,6 @@ function getRandomQuote() {
   var randomNumber = Math.floor(Math.random() * quotes.length);
   return quotes[randomNumber];
 }
-
 
 /***
   Create the `printQuote` function to: 
@@ -62,20 +59,22 @@ function getRandomQuote() {
 ***/
 
 function printQuote() {
- var quotes = getRandomQuote;
+ var quotes = getRandomQuote();
  var message = '';
+ var outputDiv = document.getElementById('quote-box');
  message += '<p class="quote">' + quotes.quote + '</p>';
  message += '<p class="source">' + quotes.source; 
-   if (quote.citation) {
-    '<span class="citation">' + quote.citation + '</span>';
+   if (quotes.citation) {
+    message += '<span class="citation">' + quotes.citation + '</span>';
    } else {
      message += '';
    }
-   if (quote.year) {
-    '<span class="year">' + quote.year + '</span></p>';
+   if (quotes.year) {
+    message += '<span class="year">' + quotes.year + '</span></p>';
    } else {
      message += '';
    }
+outputDiv.innerHTML = message;
 }
 
 
